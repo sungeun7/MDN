@@ -1,0 +1,53 @@
+
+let finalResult;
+
+let evenOddResult;
+
+// Add your code here
+
+
+let a = 1; //8
+let b = 1; //8
+let c = 1; //5
+let d = 1; //2
+
+let e = a+b;
+let f = c-d;
+
+finalResult = e*f;
+
+
+function check(){
+   if(finalResult != 48){
+      for (let a=1; a<=10; a++) {
+         for (let b=1;  b<=10; b++) {
+            for (let c=1; c<=10; c++) {
+               for (let d=1; d<=10; d++) {
+               
+               // 조건 계산
+               if ((a+b)*(c-d) === 48){
+                  finalResult = (a+b)*(c-d);
+                  evenOddResult = (finalResult % 2 === 0) ? 0 : 1;
+                     break;}
+                     }
+                  }
+               }
+            }
+         }
+      }
+check();
+
+
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+const para1 = document.createElement('p');
+const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+const para2 = document.createElement('p');
+const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+para2.textContent = evenOddResultCheck;
+
+section.appendChild(para1);
+section.appendChild(para2);
+    
